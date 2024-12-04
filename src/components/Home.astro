@@ -1,0 +1,155 @@
+---
+import background from '../assets/background.svg';
+---
+
+<div id="container">
+	<img id="background" src={background.src} alt="Background" fetchpriority="high" />
+	<header id="navbar">
+		<div id="profile">
+			<span>Andrey Barrios Valverde</span>
+		</div>
+		<nav>
+			<a href="#projects">Proyectos</a>
+			<a href="#about">Sobre mí</a>
+			<a href="#blog">Blog</a>
+			<a href="#contact">Contactar</a>
+			<a id="resume" href="/path/to/resume.pdf" download>Currículum</a>
+			<select id="language">
+				<option>Español</option>
+				<option>English</option>
+			</select>
+		</nav>
+	</header>
+
+	<main id="hero">
+		<h1>¡Hola!, soy</h1>
+		<h2>Andrey Barrios Valverde</h2>
+		<p>Desarrollo soluciones innovadoras a partir de ideas.</p>
+		<p>Ingeniero de sistemas, apasionado por la innovación y la tecnología.</p>
+		<a id="projects-btn" href="#projects">Ver mis proyectos &rarr;</a>
+	</main>
+
+	<footer id="footer">
+		<p>Andrey Barrios Valverde - Copyright &copy; 2024</p>
+		<div id="social-icons">
+			<a href="https://github.com" target="_blank">🌐</a>
+			<a href="mailto:example@example.com" target="_blank">📧</a>
+			<a href="https://linkedin.com" target="_blank">🔗</a>
+		</div>
+	</footer>
+</div>
+
+<style>
+	/* Background Styling */
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: linear-gradient(to bottom, #0d1b2a, #1b263b);
+	}
+
+	/* Container */
+	#container {
+		font-family: 'Inter', sans-serif;
+		color: white;
+		text-align: center;
+	}
+
+	/* Navbar Styling */
+	#navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 16px;
+		position: sticky;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+		backdrop-filter: blur(10px);
+	}
+
+	#profile {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	#profile-pic {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+
+	nav a {
+		margin: 0 10px;
+		color: white;
+		text-decoration: none;
+	}
+
+	#resume {
+		border: 1px solid #00ff87;
+		padding: 5px 10px;
+		border-radius: 5px;
+		color: #00ff87;
+	}
+
+	#language {
+		margin-left: 10px;
+		background: transparent;
+		color: white;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+
+	/* Hero Section */
+	#hero {
+		padding: 100px 20px;
+	}
+
+	h1 {
+		font-size: 2rem;
+		color: #00ff87;
+	}
+
+	h2 {
+		font-size: 3rem;
+		margin: 10px 0;
+	}
+
+	p {
+		font-size: 1.2rem;
+		margin: 5px 0;
+	}
+
+	#projects-btn {
+		display: inline-block;
+		margin-top: 20px;
+		padding: 10px 20px;
+		background-color: #00ff87;
+		color: #0d1b2a;
+		text-decoration: none;
+		border-radius: 5px;
+		transition: background-color 0.3s;
+	}
+
+	#projects-btn:hover {
+		background-color: #00cc6f;
+	}
+
+	/* Footer */
+	#footer {
+		padding: 20px;
+		margin-top: 40px;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	#social-icons a {
+		margin: 0 10px;
+		color: #00ff87;
+		text-decoration: none;
+		font-size: 1.5rem;
+	}
+</style>
